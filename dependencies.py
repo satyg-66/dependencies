@@ -17,11 +17,8 @@ def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies
     pacman = "yes | sudo pacman -S"
     yay = "yes | sudo yay -S"
     git = "git clone"
-
-    for i in pacman_dependencies:
-        all_pacman = " ".join(i)
-    for i in yay_dependencies:
-        all_yay = " ".join(i)
+    all_pacman = " ".join(pacman_dependencies)
+    all_yay = " ".join(yay_dependencies)
 
     try:
         subprocess.run([pacman, all_pacman], check=True)

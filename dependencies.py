@@ -14,9 +14,9 @@ yay_dependencies = ["nerd-fonts-mononoki"]
 git_dependencies = ["https://git.suckless.org/dmenu", "https://github.com/hlissner/doom-emacs ~/.emacs.d"]
 
 def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies):
-    pacman = "yes | sudo pacman -S"
-    yay = "yes | sudo yay -S"
-    git = "git clone"
+    pacman = "yes | sudo pacman -S "
+    yay = "yes | sudo yay -S "
+    git = "git clone "
     all_pacman = pacman + " ".join(pacman_dependencies)
     all_yay = yay + " ".join(yay_dependencies)
 

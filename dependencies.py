@@ -14,7 +14,7 @@ git_dependencies = ["https://git.suckless.org/dmenu", "https://github.com/hlissn
 
 def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies):
     pacman = "sudo pacman -S "
-    yay = "n | yay -S "
+    yay = "yay -S "
     git = "git clone "
     all_pacman = pacman + " ".join(pacman_dependencies)
     all_yay = yay + " ".join(yay_dependencies)

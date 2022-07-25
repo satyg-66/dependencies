@@ -7,7 +7,6 @@
 #          I do not take any responsible for any damage this script may cause.
 
 import os
-import subprocess
 
 pacman_dependencies = ["xmonad", "xmonad-contrib", "firefox", "termite", "alacritty", "pcmanfm", "nitrogen", "picom", "emacs", "exa", "ttf-jetbrains-mono", "adobe-source-code-pro-fonts", "awesome-terminal-fonts"]
 yay_dependencies = ["nerd-fonts-mononoki"]
@@ -45,7 +44,7 @@ def postinstall():
 
 def main():
     print("[+] Installing dependencies needed for Xmonad, Doom-Emacs, xmobar and such.")
-    subprocess.run(["sleep", "2"], check=True)
+    os.system("sleep 2")
     install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies)
 
 if __name__ == "__main__":

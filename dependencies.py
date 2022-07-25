@@ -9,7 +9,7 @@
 import os
 import subprocess
 
-pacman_dependencies = ["xmonad", "xmonad-contrib", "firefox", "termite", "alacritty", "pcmanfm", "nitrogen", "picom", "emcas", "exa", "ttf-jetbrains-mono", "adobe-source-code-pro-fonts", "awesome-terminal-fonts"]
+pacman_dependencies = ["xmonad", "xmonad-contrib", "firefox", "termite", "alacritty", "pcmanfm", "nitrogen", "picom", "emacs", "exa", "ttf-jetbrains-mono", "adobe-source-code-pro-fonts", "awesome-terminal-fonts"]
 yay_dependencies = ["nerd-fonts-mononoki"]
 git_dependencies = ["https://git.suckless.org/dmenu", "https://github.com/hlissner/doom-emacs ~/.emacs.d"]
 

@@ -13,6 +13,7 @@ yay_dependencies = ["nerd-fonts-mononoki", "starship", "shell-color-scripts"]
 git_dependencies = ["https://github.com/satyg-66/dotfiles.git", "https://git.suckless.org/dmenu", "https://github.com/hlissner/doom-emacs ~/.emacs.d"]
 
 def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies):
+    os.system("yes | sudo pacman -Syyu")
     pacman = "sudo pacman -S "
     yay = "yay -S "
     git = "git clone "

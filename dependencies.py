@@ -31,16 +31,13 @@ def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies
     postinstall()
 
 def postinstall():
-    alias = ['"emacsclient -c -a \'emacs\'"']
     try:
         os.system("mv ~/dependencies/dmenu /usr/local/dmenu && cd /usr/local/dmenu && make clean install && cd ~")
-        with open("~/dependencies/config", "r") as f:
-            data = f.read()
-            os.system(f"cat {data} >> ~/.bashrc && source ~/.bashrc")
+        os.system("cat ~/dependencies/config >> ~/.bashrc && source ~/.bashrc")
         os.system("~/.emacs.d/bin/doom install")
         os.system("git clone https://github.com/satyg-66/dotfiles.git ~")
         os.system("mkdir ~/.xmonad && mv ~/dotfiles/xmonad.hs ~/.xmonad/xmonad.hs")
-        os.system("mv ~/dotfiles/doom.d/* ~/.doom.d")
+        os.system("mv ~/dotfiles/doom.d/* ~/.doom.d/")
         os.system("mv ~/dotfiles/xmobarrc ~/.config/xmobar/xmobarrc")
         os.system("rm -rf ~/dotfiles")
     except:

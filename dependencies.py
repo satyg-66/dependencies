@@ -35,7 +35,7 @@ def postinstall():
         os.system("sudo mv ~/dependencies/dmenu /usr/local/dmenu && cd /usr/local/dmenu && sudo make clean install && cd ~")
         os.system("cat ~/dependencies/config >> ~/.bashrc && source ~/.bashrc")
         os.system("~/.emacs.d/bin/doom install")
-        os.system("mkdir ~/.xmonad ~/.config/xmobar")
+        os.system("mkdir ~/.xmonad ~/.config/xmobar ~/.config/fish")
         os.system("mv ~/dependencies/dotfiles/termite/config ~/.config/termite/")
         os.system("mv ~/dependencies/dotfiles/xmonad.hs ~/.xmonad/")
         os.system("mv ~/dependencies/dotfiles/doom.d/* ~/.doom.d/")

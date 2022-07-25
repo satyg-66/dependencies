@@ -42,7 +42,7 @@ def postinstall():
         os.system("mv ~/dependencies/dotfiles/xmobarrc ~/.config/xmobar/")
         os.system("chsh -s $(which fish)")
         os.system("mv ~/dependencies/dotfiles/fish/config.fish ~/.config/fish/")
-        os.system("rm -rf ~/dotfiles ~/dependencies")
+        os.system("rm -rf ~/dependencies")
     except:
         quit("Something went wrong during the post installation... program terminated!")
 

@@ -34,7 +34,7 @@ def postinstall():
         os.system("sudo mv ~/dependencies/dmenu /usr/local/dmenu && cd /usr/local/dmenu && sudo make clean install && cd ~")
         os.system("cat ~/dependencies/config >> ~/.bashrc && source ~/.bashrc")
         os.system("~/.emacs.d/bin/doom install")
-        os.system("git clone https://github.com/satyg-66/dotfiles.git ~")
+        os.system("git clone https://github.com/satyg-66/dotfiles.git ~/dotfiles")
         os.system("mkdir ~/.xmonad && mv ~/dotfiles/xmonad.hs ~/.xmonad/xmonad.hs")
         os.system("mv ~/dotfiles/doom.d/* ~/.doom.d/")
         os.system("mv ~/dotfiles/xmobarrc ~/.config/xmobar/xmobarrc")

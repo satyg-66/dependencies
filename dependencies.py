@@ -9,7 +9,7 @@
 import os
 
 pacman_dependencies = ["fish", "xmonad", "xmonad-contrib", "xmobar", "firefox", "termite", "alacritty", "pcmanfm", "nitrogen", "picom", "emacs", "exa", "ttf-jetbrains-mono", "adobe-source-code-pro-fonts", "awesome-terminal-fonts"]
-yay_dependencies = ["nerd-fonts-mononoki"]
+yay_dependencies = ["nerd-fonts-mononoki", "starship", "shell-color-scripts"]
 git_dependencies = ["https://github.com/satyg-66/dotfiles.git", "https://git.suckless.org/dmenu", "https://github.com/hlissner/doom-emacs ~/.emacs.d"]
 
 def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies):
@@ -31,7 +31,6 @@ def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies
 
 def postinstall():
     try:
-
         os.system("sudo mv ~/dependencies/dmenu /usr/local/dmenu && cd /usr/local/dmenu && sudo make clean install && cd ~")
         os.system("cat ~/dependencies/config >> ~/.bashrc && source ~/.bashrc")
         os.system("~/.emacs.d/bin/doom install")

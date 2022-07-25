@@ -31,7 +31,7 @@ def install_dependencies(pacman_dependencies, yay_dependencies, git_dependencies
 
 def postinstall():
     try:
-        os.system("mv ~/dotfiles/fish/config.fish ~/.config/fish/")
+
         os.system("sudo mv ~/dependencies/dmenu /usr/local/dmenu && cd /usr/local/dmenu && sudo make clean install && cd ~")
         os.system("cat ~/dependencies/config >> ~/.bashrc && source ~/.bashrc")
         os.system("~/.emacs.d/bin/doom install")
@@ -40,8 +40,9 @@ def postinstall():
         os.system("mv ~/dotfiles/xmonad.hs ~/.xmonad/")
         os.system("mv ~/dotfiles/doom.d/* ~/.doom.d/")
         os.system("mv ~/dotfiles/xmobarrc ~/.config/xmobar/")
-        os.system("rm -rf ~/dotfiles ~/dependencies")
         os.system("chsh -s $(which fish)")
+        os.system("mv ~/dotfiles/fish/config.fish ~/.config/fish/")
+        os.system("rm -rf ~/dotfiles ~/dependencies")
     except:
         quit("Something went wrong during the post installation... program terminated!")
 
